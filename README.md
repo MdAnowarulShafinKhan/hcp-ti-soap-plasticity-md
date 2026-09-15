@@ -39,7 +39,7 @@ At \($10^{9}\,\mathrm{s}^{-1}$), the three system sizes have nearly indistinguis
 
 ## 2. PTM local-structure evolution
 
-PTM was evaluated with RMSD cutoff **0.15**. At \(10^9\;\mathrm{s^{-1}}\), clear HCP loss begins near 15.4% for all three sizes. At 25% strain, the 32k and 108k cases retain ~77.8% HCP, while the 4k cell shows stronger finite-size fluctuations. The high-rate 108k case retains only ~35.2% HCP and ~58.4% is classified as `Other` at 25%.
+PTM was evaluated with RMSD cutoff **0.15**. At \($10^{9}\,\mathrm{s}^{-1}$\), clear HCP loss begins near 15.4% for all three sizes. At 25% strain, the 32k and 108k cases retain ~77.8% HCP, while the 4k cell shows stronger finite-size fluctuations. The high-rate 108k case retains only ~35.2% HCP and ~58.4% is classified as `Other` at 25%.
 
 These are **local PTM template classifications**, not equilibrium bulk phase fractions.
 
