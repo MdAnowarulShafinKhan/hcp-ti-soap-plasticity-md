@@ -191,10 +191,11 @@ A detailed audit is in [`docs/AUDIT_AND_LIMITATIONS.md`](docs/AUDIT_AND_LIMITATI
 ## References and provenance
 
 1. F. Safari and K. Konstantinou, *Uniaxial compression of crystalline HCP titanium: an atomistic modelling study of size effects*, arXiv:2606.28155 (2026). https://arxiv.org/abs/2606.28155
-2. Y.-M. Kim, B.-J. Lee, M. I. Baskes, *Modified embedded-atom method interatomic potentials for Ti and Zr*, Phys. Rev. B 74, 014101 (2006). https://doi.org/10.1103/PhysRevB.74.014101
-3. NIST Interatomic Potentials Repository / OpenKIM model metadata: `MEAM_LAMMPS_KimLeeBaskes_2006_Ti__MO_472654156677_001`. https://www.ctcms.nist.gov/potentials/entry/2006--Kim-Y-M-Lee-B-J-Baskes-M-I--Ti/
-4. LAMMPS documentation: https://docs.lammps.org/
-5. OVITO PTM documentation: https://www.ovito.org/manual/reference/pipelines/modifiers/polyhedral_template_matching.html
-6. DScribe SOAP documentation: https://singroup.github.io/dscribe/latest/tutorials/descriptors/soap.html
+2. F. C. Mocanu, S. R. Elliott, and K. Konstantinou, *Partial Melting and Structural Disorder in Models of Irradiated Amorphous Ge2Sb2Te5*, Phys. Status Solidi RRL 19, 2500037 (2025). DOI: 10.1002/pssr.202500037
+3. Y.-M. Kim, B.-J. Lee, M. I. Baskes, *Modified embedded-atom method interatomic potentials for Ti and Zr*, Phys. Rev. B 74, 014101 (2006). https://doi.org/10.1103/PhysRevB.74.014101
+4. NIST Interatomic Potentials Repository / OpenKIM model metadata: `MEAM_LAMMPS_KimLeeBaskes_2006_Ti__MO_472654156677_001`. https://www.ctcms.nist.gov/potentials/entry/2006--Kim-Y-M-Lee-B-J-Baskes-M-I--Ti/
+5. LAMMPS documentation: https://docs.lammps.org/
+6. OVITO PTM documentation: https://www.ovito.org/manual/reference/pipelines/modifiers/polyhedral_template_matching.html
+7. DScribe SOAP documentation: https://singroup.github.io/dscribe/latest/tutorials/descriptors/soap.html
 
 The original potential-model license and provenance files are preserved under `potentials/`. See [`THIRD_PARTY_NOTICE.md`](THIRD_PARTY_NOTICE.md).
