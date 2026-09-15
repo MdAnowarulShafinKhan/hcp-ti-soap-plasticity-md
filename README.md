@@ -207,5 +207,6 @@ A detailed audit is in [`docs/AUDIT_AND_LIMITATIONS.md`](docs/AUDIT_AND_LIMITATI
 5. LAMMPS documentation: https://docs.lammps.org/
 6. OVITO PTM documentation: https://www.ovito.org/manual/reference/pipelines/modifiers/polyhedral_template_matching.html
 7. DScribe SOAP documentation: https://singroup.github.io/dscribe/latest/tutorials/descriptors/soap.html
+8. P. Hirel, *Atomsk: A tool for manipulating and converting atomic data files*, Computer Physics Communications **197**, 212–219 (2015). DOI: 10.1016/j.cpc.2015.07.012.
 
 The original potential-model license and provenance files are preserved under `potentials/`. See [`THIRD_PARTY_NOTICE.md`](THIRD_PARTY_NOTICE.md).
