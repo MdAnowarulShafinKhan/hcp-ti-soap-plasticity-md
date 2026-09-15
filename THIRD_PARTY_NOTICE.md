@@ -14,7 +14,9 @@ This repository does **not** claim authorship of the interatomic potential.
 
 ## Initial structures
 
-`Ti_4k.lmp`, `Ti_32k.lmp`, and `Ti_108k.lmp` were supplied as project inputs and correspond to the HCP Ti geometries used for the size-series study. Their orientation is H1=[10-10], H2=[1-210], H3=[0001]. They are included because the repository is intended to remain reproducible without an external file store.
+`Ti_4k.lmp`, `Ti_32k.lmp`, and `Ti_108k.lmp` are ideal HCP Ti starting structures generated for this project. The crystal orientation is H1=[10-10], H2=[1-210], H3=[0001], with the [0001] c-axis aligned with the simulation z direction. The structures use HCP lattice parameters a = 2.95 Å and c = 4.68 Å and contain 4,000, 32,000, and 108,000 atoms, respectively.
+
+The structures are included directly in the repository so that the molecular-dynamics workflow can be reproduced without an external file store.
 
 ## Project code
 
