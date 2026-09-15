@@ -8,6 +8,16 @@ The project contains four completed simulations: 4k, 32k, and 108k atoms at \(10
 
 ![Coupled mechanical, PTM and SOAP transition](figures/Fig5_coupled_transition.png)
 
+## Motivation and relationship to prior work
+
+This repository is an independent research-portfolio study inspired by two recent directions in atomistic materials modelling.
+
+Safari and Konstantinou (2026) investigated the size- and strain-rate-dependent deformation of crystalline HCP titanium under uniaxial compression using molecular dynamics, including systems extending to tens of millions of atoms. Mocanu, Elliott, and Konstantinou (2025) demonstrated the use of globally averaged SOAP descriptors together with multidimensional scaling (MDS) to construct configurational maps of structural evolution.
+
+The present project combines these ideas at a smaller, reproducible scale. HCP Ti compression is characterized using conventional mechanical observables and polyhedral template matching (PTM), while SOAP descriptors and MDS are used to map the corresponding evolution through atomic-configuration space.
+
+This repository is not intended as a full reproduction of either study. Instead, it demonstrates an integrated workflow connecting molecular dynamics, local-structure analysis, and descriptor-based materials informatics for studying the elastic-to-plastic transition in crystalline HCP Ti.
+
 ## Headline results
 
 Mechanical peaks are extracted from a Savitzky-Golay curve whose window is defined in **strain space (~0.5% engineering strain)** rather than by a fixed number of output rows.
