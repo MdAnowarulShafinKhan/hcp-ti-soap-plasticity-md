@@ -1,0 +1,22 @@
+[{"checksums" {"CMakeLists.txt" "eddc3f020cb2b8b8f2d1d44057216d6575032e5d"
+               "LICENSE" "731a8eff333b8f7053ab2220511b524c87a75923"
+               "Ti.meam" "c90659b42e6c2f910dc981f903e7937fcef788b7"
+               "elems.meam" "92dad3079225af0c164797586ed2f2e4fe2148c5"
+               "kimspec.edn" "2c8c0ec0d765dacb919e275701d8470a7c77b685"
+               "library.meam" "40b68687fe64ed60ca335a9a3f94162fe34796d0"}
+  "comments" "[auto-generated-by-openkim.org] Upgrade to new Driver: MEAM_LAMMPS__MD_249792265679_002"
+  "event-type" "revised-version-creation"
+  "extended-id" "MEAM_LAMMPS_KimLeeBaskes_2006_Ti__MO_472654156677_001"
+  "timestamp" "2023-05-06 12:59:53"
+  "user-id" "4ad03136-ed7f-4316-b586-1e94ccceb311"}
+ {"checksums" {"CMakeLists.txt" "6df6e023ee53d40d2d1aae180b8530fa9c1c7cfc"
+               "LICENSE" "731a8eff333b8f7053ab2220511b524c87a75923"
+               "Ti.meam" "c90659b42e6c2f910dc981f903e7937fcef788b7"
+               "elems.meam" "92dad3079225af0c164797586ed2f2e4fe2148c5"
+               "kimspec.edn" "5941d1ed3bcf4e3a0b6aee8f1817de6fc073dd0b"
+               "library.meam" "40b68687fe64ed60ca335a9a3f94162fe34796d0"}
+  "comments" ""
+  "event-type" "initial-creation"
+  "extended-id" "MEAM_LAMMPS_KimLeeBaskes_2006_Ti__MO_472654156677_000"
+  "timestamp" "2022-05-31 09:01:23"
+  "user-id" "4ad03136-ed7f-4316-b586-1e94ccceb311"}]

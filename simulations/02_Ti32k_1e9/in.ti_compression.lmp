@@ -1,0 +1,126 @@
+# HCP Ti c-axis compression: data-driven plasticity project
+# Source design: Safari & Konstantinou, arXiv:2606.28155v1
+# Potential: Kim, Lee & Baskes (2006) 2NN-MEAM Ti
+# This run intentionally follows the paper's 300 K, 0 bar, 1 fs, PBC setup,
+# but stops at 25% strain because the project targets the yield transition.
+
+clear
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+variable        seed equal 4928459
+variable        T equal 300.0
+variable        datafile string Ti_32k.lmp
+variable        erate equal -0.001
+variable        nload equal 250000
+
+shell           mkdir -p output
+log             output/log.lammps
+
+read_data       ${datafile}
+
+pair_style      meam
+pair_coeff      * * library.meam Ti Ti.meam Ti
+
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes
+
+timestep        0.001
+
+# ----------------------------------------------------------------------
+# Stage 1: 100 ps isotropic NPT equilibration at 300 K and 0 bar
+# ----------------------------------------------------------------------
+velocity        all create ${T} ${seed} mom yes rot no dist gaussian
+
+thermo          1000
+thermo_style    custom step time atoms temp press pxx pyy pzz pe lx ly lz vol density
+thermo_modify   flush yes
+
+variable        eqstep equal step
+variable        eqtime equal time
+variable        eqtemp equal temp
+variable        eqpress equal press
+variable        eqpxx equal pxx
+variable        eqpyy equal pyy
+variable        eqpzz equal pzz
+variable        eqlx equal lx
+variable        eqly equal ly
+variable        eqlz equal lz
+variable        eqvol equal vol
+variable        eqrho equal density
+variable        eqpepa equal pe/atoms
+
+fix             EQOUT all print 1000 "${eqstep},${eqtime},${eqtemp},${eqpress},${eqpxx},${eqpyy},${eqpzz},${eqlx},${eqly},${eqlz},${eqvol},${eqrho},${eqpepa}" &
+                file output/equilibration.csv screen no &
+                title "step,time_ps,temp_K,press_bar,pxx_bar,pyy_bar,pzz_bar,lx_A,ly_A,lz_A,vol_A3,density_g_cm3,pe_eV_atom"
+
+fix             EQ all npt temp ${T} ${T} 0.1 iso 0.0 0.0 1.0
+run             100000
+unfix           EQ
+unfix           EQOUT
+
+write_data      output/equilibrated.data
+write_restart   output/equilibrated.restart
+
+# ----------------------------------------------------------------------
+# Stage 2: c-axis compression at constant engineering strain rate
+# x and y are barostatted at 0 bar to permit transverse relaxation.
+# z is controlled by fix deform. remap x is appropriate for a solid.
+# ----------------------------------------------------------------------
+reset_timestep  0
+run             0 post no
+
+# Store post-equilibration c-axis length as a constant reference.
+variable        lzcur equal lz
+variable        lz0 equal ${lzcur}
+
+variable        stepnow equal step
+variable        timenow equal time
+variable        strain equal (v_lz0-lz)/v_lz0
+# LAMMPS metal pressure unit is bar. 1 bar = 1e-4 GPa.
+# pzz is positive under compression in this pressure convention.
+variable        sigzz equal pzz*1.0e-4
+variable        sigxx equal pxx*1.0e-4
+variable        sigyy equal pyy*1.0e-4
+variable        tempnow equal temp
+variable        pepa equal pe/atoms
+variable        lxnow equal lx
+variable        lynow equal ly
+variable        lznow equal lz
+variable        volnow equal vol
+variable        rhonow equal density
+
+fix             LOAD all npt temp ${T} ${T} 0.1 x 0.0 0.0 1.0 y 0.0 0.0 1.0 couple none
+fix             DEF all deform 1 z erate ${erate} remap x units box
+
+# Dense scalar output is cheap and gives clean stress-strain curves.
+fix             MECH all print 100 "${stepnow},${timenow},${strain},${sigzz},${sigxx},${sigyy},${tempnow},${pepa},${lxnow},${lynow},${lznow},${volnow},${rhonow}" &
+                file output/mechanics.csv screen no &
+                title "step,time_ps,strain,sigma_zz_GPa,sigma_xx_GPa,sigma_yy_GPa,temp_K,pe_eV_atom,lx_A,ly_A,lz_A,vol_A3,density_g_cm3"
+
+# Variable-cadence atomic trajectory:
+# 1% strain spacing far from yield, 0.5% at 10-12%, and 0.2% at 12-18%.
+variable        dumpfile file dump_steps.txt
+variable        nextdump equal next(dumpfile)
+dump            TRAJ all custom 10000 output/trajectory.lammpstrj id type x y z
+dump_modify     TRAJ every v_nextdump first yes
+
+thermo          1000
+thermo_style    custom step time temp press pxx pyy pzz pe lx ly lz vol density v_strain v_sigzz
+
+restart         50000 output/restart.*.bin
+run             ${nload}
+
+unfix           LOAD
+unfix           DEF
+unfix           MECH
+undump          TRAJ
+
+write_data      output/final_deformed.data
+write_restart   output/final.restart
+
+print "Completed Ti 32k, 1e9 s^-1"
+print "Reference Lz after equilibration = ${lz0} Angstrom"
+print "Final compressive engineering strain = ${strain}"

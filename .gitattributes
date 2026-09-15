@@ -1,2 +1,13 @@
-# Auto detect text files and perform LF normalization
 * text=auto
+*.sh text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.lmp text eol=lf
+*.data text eol=lf
+*.meam text eol=lf
+*.png binary
+*.npz binary
+*.npy binary
+*.xlsx binary

@@ -1,0 +1,37 @@
+{"content-origin" "https://www.ctcms.nist.gov/potentials/entry/2006--Kim-Y-M-Lee-B-J-Baskes-M-I--Ti/"
+ "contributor-id" "4ad03136-ed7f-4316-b586-1e94ccceb311"
+ "description" "This is a semiempirical interatomic potential for hcp Ti, developed based on the MEAM (modified embedded-atom method) formalism. This potential does not cause the stability problem previously reported in MEAM for hcp elements, and describes a wide range of physical properties (bulk properties, point defect properties, planar defect properties, and thermal properties) of pure Ti, in good agreement with experimental information."
+ "developer" ["b49d8c1b-f150-4c82-b751-f0a131e694f7"
+              "c8ad0beb-f4c8-4ddc-8a25-372f5cc4a17e"
+              "05936d64-2312-402a-9873-5b6799e9f6db"]
+ "doi" "10.25950/f8f658f3"
+ "domain" "openkim.org"
+ "executables" []
+ "extended-id" "MEAM_LAMMPS_KimLeeBaskes_2006_Ti__MO_472654156677_001"
+ "funding" [{"funder-name" "Ministry of Science and Technology of Korea"}
+            {"funder-identifier" "https://doi.org/10.13039/100006151"
+             "funder-identifier-type" "Crossref Funder ID"
+             "funder-name" "Basic Energy Sciences"
+             "scheme-uri" "http://doi.org/"}]
+ "kim-api-version" "2.2"
+ "maintainer-id" "4ad03136-ed7f-4316-b586-1e94ccceb311"
+ "model-driver" "MEAM_LAMMPS__MD_249792265679_002"
+ "potential-type" "meam"
+ "publication-year" "2023"
+ "source-citations" [{"author" "Kim, Young-Min and Lee, Byeong-Joo and Baskes, M. I."
+                      "doi" "10.1103/PhysRevB.74.014101"
+                      "issue" "1"
+                      "journal" "Phys. Rev. B"
+                      "month" "jul"
+                      "numpages" "12"
+                      "pages" "014101"
+                      "publisher" "American Physical Society"
+                      "recordkey" "MO_472654156677_001a"
+                      "recordprimary" "recordprimary"
+                      "recordtype" "article"
+                      "title" "Modified embedded-atom method interatomic potentials for {Ti and Zr}"
+                      "url" "https://link.aps.org/doi/10.1103/PhysRevB.74.014101"
+                      "volume" "74"
+                      "year" "2006"}]
+ "species" ["Ti"]
+ "title" "MEAM Potential for Ti developed by Kim, Lee, and Baskes (2006) v001"}

@@ -1,0 +1,17 @@
+{
+  "label": "Ti 108k, 1e9 s^-1",
+  "short": "108k_1e9",
+  "atoms": 108000,
+  "data_file": "Ti_108k.lmp",
+  "temperature_K": 300.0,
+  "pressure_bar": 0.0,
+  "timestep_fs": 1.0,
+  "equilibration_ps": 100.0,
+  "loading_direction": "z = [0001] (c-axis)",
+  "strain_rate_s-1": 1000000000.0,
+  "strain_rate_ps-1": 0.001,
+  "target_compressive_strain": 0.25,
+  "loading_steps": 250000,
+  "seed": 4928459,
+  "potential": "Kim-Lee-Baskes 2006 2NN-MEAM Ti"
+}

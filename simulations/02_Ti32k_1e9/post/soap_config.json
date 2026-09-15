@@ -1,0 +1,16 @@
+{
+  "sample_atoms": 1000,
+  "sample_seed": 20260915,
+  "feature_count": 147,
+  "species": [
+    "Ti"
+  ],
+  "periodic": true,
+  "r_cut": 5.0,
+  "n_max": 6,
+  "l_max": 6,
+  "sigma": 0.5,
+  "average": "off",
+  "sparse": false,
+  "dtype": "float32"
+}

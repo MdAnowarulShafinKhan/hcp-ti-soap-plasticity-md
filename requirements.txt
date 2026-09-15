@@ -1,0 +1,10 @@
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+matplotlib>=3.8
+scikit-learn>=1.4
+ase>=3.23
+dscribe>=2.1
+ovito>=3.12
+
+openpyxl>=3.1

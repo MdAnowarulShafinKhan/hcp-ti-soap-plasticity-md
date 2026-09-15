@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Large reproducible MD products (regenerate locally)
+**/output/trajectory.lammpstrj
+**/output/restart.*
+**/output/*.restart
+**/output/final.restart
+**/post/soap_local_samples.npz
+
+# OS / accidental transfer metadata
+*Zone.Identifier
+-p/
+.DS_Store
+Thumbs.db
+
+# Editor / scratch files
+*.swp
+*.tmp

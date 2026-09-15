@@ -1,0 +1,32 @@
+{
+  "case": "Ti 32k, 1e9 s^-1",
+  "atoms": 32000,
+  "strain_rate_s-1": 1000000000.0,
+  "smoothing": {
+    "method": "Savitzky-Golay",
+    "target_width_strain": 0.005,
+    "target_width_percent": 0.5,
+    "median_strain_step": 9.999999999998899e-05,
+    "window_points": 51,
+    "effective_span_strain": 0.004999999999999449,
+    "effective_span_percent": 0.49999999999994493,
+    "polyorder": 3
+  },
+  "equilibration": {
+    "T_mean_K": 299.65111064253966,
+    "T_std_K": 1.3261737997637921,
+    "P_mean_bar": 37.49595108792139,
+    "P_std_bar": 371.6017799681181,
+    "Pxx_mean_bar": -1336.342003454406,
+    "Pyy_mean_bar": -1313.1197301608263,
+    "Pzz_mean_bar": 2761.9495868789973
+  },
+  "elastic_modulus_GPa_fit_2to10pct": 127.00400270999624,
+  "elastic_fit_intercept_GPa": 0.7705415836240854,
+  "yield_strain": 0.1509,
+  "yield_strain_percent": 15.09,
+  "yield_stress_GPa": 16.60916485267581,
+  "stress_drop_GPa_next_3pct": 13.502101909012296,
+  "flow_stress_mean_GPa_20to25pct": 4.8467950558359645,
+  "flow_stress_std_GPa_20to25pct": 0.22750540170100766
+}

@@ -1,0 +1,6 @@
+{
+  "n_frames": 208,
+  "kruskal_stress_1": 0.006706135330126199,
+  "distance_pearson_r": 0.9999466111002754,
+  "description": "Quality of 2-D MDS representation relative to normalized SOAP distances."
+}
