@@ -33,7 +33,7 @@ Because these are ideal periodic single crystals at MD strain rates, the peak sh
 
 ## 1. Mechanical response
 
-At \($10^{9}\,\mathrm{s}^{-1}$), the three system sizes have nearly indistinguishable pre-peak response and peak stress (~16.61 GPa), but the post-peak response becomes progressively less noisy as the system grows. Increasing the rate to \(10^{10}\;\mathrm{s^{-1}}\) shifts the 108k peak to ~15.4% and changes the subsequent relaxation path.
+At \($10^{9}\,\mathrm{s}^{-1}$), the three system sizes have nearly indistinguishable pre-peak response and peak stress (~16.61 GPa), but the post-peak response becomes progressively less noisy as the system grows. Increasing the rate to \($10^{10}\,\mathrm{s}^{-1}$\) shifts the 108k peak to ~15.4% and changes the subsequent relaxation path.
 
 ![Mechanical response](figures/Fig1_mechanical_response.png)
 
