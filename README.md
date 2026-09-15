@@ -2,7 +2,7 @@
 
 This repository combines **LAMMPS molecular dynamics**, **polyhedral template matching (PTM)**, and **SOAP structural descriptors** to track the atomic-scale structural transformation of defect-free HCP Ti during uniaxial **c-axis compression**.
 
-The project contains four completed simulations: 4k, 32k, and 108k atoms at $10^{9}\,\mathrm{s}^{-1}$, plus a 108k rate-contrast case at $10^{10}\,\mathrm{s}^{-1}$. All four runs use the Kim-Lee-Baskes Ti 2NN-MEAM model, 300 K, periodic boundary conditions, 100 ps of NPT equilibration, and loading to 25% engineering compression.
+The project contains four completed simulations: 4k, 32k, and 108k atoms at $10^{9}\ \mathrm{s}^{-1}$, plus a 108k rate-contrast case at $10^{10}\ \mathrm{s}^{-1}$. All four runs use the Kim-Lee-Baskes Ti 2NN-MEAM model, 300 K, periodic boundary conditions, 100 ps of NPT equilibration, and loading to 25% engineering compression.
 
 > **Central result:** the stress peak near 15% strain coincides with a sharp loss of HCP local order and a strong reorganization of SOAP descriptor space. The pre-transition response is nearly size-independent, while the post-transition structure and stress fluctuations show clear dependence on system size and strain rate.
 
@@ -33,13 +33,13 @@ Because these are ideal periodic single crystals simulated at MD strain rates, t
 
 ## 1. Mechanical response
 
-At $10^{9}\,\mathrm{s}^{-1}$, the three system sizes have nearly indistinguishable pre-peak responses and peak stresses (~16.61 GPa), while the post-peak response becomes progressively less noisy as system size increases. Increasing the rate to $10^{10}\,\mathrm{s}^{-1}$ shifts the 108k peak to ~15.4% strain and changes the subsequent relaxation path.
+At $10^{9}\ \mathrm{s}^{-1}$, the three system sizes have nearly indistinguishable pre-peak responses and peak stresses (~16.61 GPa), while the post-peak response becomes progressively less noisy as system size increases. Increasing the rate to $10^{10}\ \mathrm{s}^{-1}$ shifts the 108k peak to ~15.4% strain and changes the subsequent relaxation path.
 
 ![Mechanical response](figures/Fig1_mechanical_response.png)
 
 ## 2. PTM local-structure evolution
 
-PTM was evaluated with an RMSD cutoff of **0.15**. At $10^{9}\,\mathrm{s}^{-1}$, clear HCP loss begins near 15.4% strain for all three sizes. At 25% strain, the 32k and 108k cases each retain ~77.8% HCP, while the 4k cell shows stronger finite-size fluctuations. The high-rate 108k case retains only ~35.2% HCP, while ~58.4% of atoms are classified as `Other` at 25% strain.
+PTM was evaluated with an RMSD cutoff of **0.15**. At $10^{9}\ \mathrm{s}^{-1}$, clear HCP loss begins near 15.4% strain for all three sizes. At 25% strain, the 32k and 108k cases each retain ~77.8% HCP, while the 4k cell shows stronger finite-size fluctuations. The high-rate 108k case retains only ~35.2% HCP, while ~58.4% of atoms are classified as `Other` at 25% strain.
 
 These are **local PTM template classifications**, not equilibrium bulk phase fractions.
 
@@ -61,7 +61,7 @@ The combined two-dimensional MDS representation preserves the SOAP distance geom
 
 ![SOAP MDS map](figures/Fig3_soap_mds_map.png)
 
-The descriptor distance from the equilibrated 0% reference increases during elastic compression, then reorganizes sharply through the transition. For the 108k cell at 16% strain, the SOAP distance is ~0.0175 at $10^{9}\,\mathrm{s}^{-1}$ but ~0.0831 at $10^{10}\,\mathrm{s}^{-1}$, demonstrating a substantial rate-dependent difference in configurational evolution.
+The descriptor distance from the equilibrated 0% reference increases during elastic compression, then reorganizes sharply through the transition. For the 108k cell at 16% strain, the SOAP distance is ~0.0175 at $10^{9}\ \mathrm{s}^{-1}$ but ~0.0831 at $10^{10}\ \mathrm{s}^{-1}$, demonstrating a substantial rate-dependent difference in configurational evolution.
 
 **Important:** SOAP distance here is a descriptor-space distance from the 0% reference; it is **not** a monotonic disorder parameter. Affine elastic strain contributes substantially before the transition.
 
@@ -77,7 +77,7 @@ The simulations used **isotropic NPT** equilibration. Consequently, the mean hyd
 
 ![Equilibration pressure components](figures/FigS5_equilibration_pressure.png)
 
-Plastic relaxation generates transient heating even though the simulations are thermostatted. In the 108k systems, the temperature reaches ~357 K near 15.79% strain at $10^{9}\,\mathrm{s}^{-1}$ and ~406 K near 18.2% strain at $10^{10}\,\mathrm{s}^{-1}$. Therefore, the rate comparison should be interpreted as a nonequilibrium response that includes different transient plastic-heating histories.
+Plastic relaxation generates transient heating even though the simulations are thermostatted. In the 108k systems, the temperature reaches ~357 K near 15.79% strain at $10^{9}\ \mathrm{s}^{-1}$ and ~406 K near 18.2% strain at $10^{10}\ \mathrm{s}^{-1}$. Therefore, the rate comparison should be interpreted as a nonequilibrium response that includes different transient plastic-heating histories.
 
 ![Transient plastic heating](figures/FigS4_temperature_near_yield.png)
 
