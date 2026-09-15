@@ -2,7 +2,7 @@
 
 This repository combines **LAMMPS molecular dynamics**, **polyhedral template matching (PTM)**, and **SOAP structural descriptors** to track the atomic-scale structural transformation of defect-free HCP Ti during uniaxial **c-axis compression**.
 
-The project contains four completed simulations: 4k, 32k, and 108k atoms at \(10^9\;\mathrm{s^{-1}}\), plus a 108k rate-contrast case at \($10^{10}\,\mathrm{s}^{-1}$). All runs use the Kim-Lee-Baskes Ti 2NN-MEAM model, 300 K, periodic boundaries, 100 ps NPT equilibration, and loading to 25% engineering compression.
+The project contains four completed simulations: 4k, 32k, and 108k atoms at \($10^{9}\,\mathrm{s}^{-1}$\), plus a 108k rate-contrast case at \($10^{10}\,\mathrm{s}^{-1}$). All runs use the Kim-Lee-Baskes Ti 2NN-MEAM model, 300 K, periodic boundaries, 100 ps NPT equilibration, and loading to 25% engineering compression.
 
 > **Central result:** the mechanical peak near 15% strain coincides with a sharp loss of HCP local order and a strong reorganization of SOAP descriptor space. The pre-transition response is almost size independent, while post-transition structure and stress fluctuations show clear size/rate dependence.
 
